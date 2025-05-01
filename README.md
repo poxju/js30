@@ -1,10 +1,10 @@
 # JS-30 Challenge
 This repo contains JS-30 Challenge content only. This may change from day to day. 
 
-if the challenge is:
-:white_check_mark: finished, 
-:ballot_box_with_check: still working on, 
-has not been added yet I have not started.
+if the challenge is: 
+    :white_check_mark: finished, 
+    :ballot_box_with_check: still working on, 
+    has not been added yet I have not started.
 
 |No.|Name|Status|Additional Info|
 |--|--|--|--|
