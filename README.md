@@ -9,7 +9,9 @@ if the challenge is:
 |No.|Name|Status|Additional Info|
 |--|--|--|--|
 |1|DrumKIT|:white_check_mark:|bugs on Safari|
-|2|Clock|:ballot_box_with_check:|-|
+|2|Clock|:white_check_mark:|glitch after one lap|
+|3|CSS Var. & JS|:ballot_box_with_check:|-|
+
 
 
 
