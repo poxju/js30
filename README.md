@@ -12,6 +12,7 @@ has not been added yet I have not started.
 |2|Clock|:white_check_mark:|glitch after one lap|
 |3|CSS Var. & JS|:white_check_mark:|will be js31|
 |4|Array Cardio Day 1|:ballot_box_with_check:|-|
+|5|Flex Panels Image Gallery|:ballot_box_with_check:|-|
 
 
 
