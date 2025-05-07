@@ -13,6 +13,7 @@ has not been added yet I have not started.
 |3|CSS Var. & JS|:white_check_mark:|will be js31|
 |4|Array Cardio Day 1|:ballot_box_with_check:|-|
 |5|Flex Panels Image Gallery|:white_check_mark:|-|
-|6|Type Ahead|:ballot_box_with_check:|-|
+|6|Type Ahead|:white_check_mark:|-|
+|7|Array Cardio Day 2|:ballot_box_with_check:|-|
 
 OG Repo [*here*](https://github.com/wesbos/JavaScript30).
