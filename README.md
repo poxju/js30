@@ -14,6 +14,7 @@ has not been added yet I have not started.
 |4|Array Cardio Day 1|:ballot_box_with_check:|-|
 |5|Flex Panels Image Gallery|:white_check_mark:|-|
 |6|Type Ahead|:white_check_mark:|-|
-|7|Array Cardio Day 2|:ballot_box_with_check:|-|
+|7|Array Cardio Day 2|:white_check_mark:|-|
+|8|Fun with HTML5 Canvas|:ballot_box_with_check:|-|
 
 OG Repo [*here*](https://github.com/wesbos/JavaScript30).
