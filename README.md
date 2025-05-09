@@ -4,8 +4,9 @@ This repo contains JS-30 Challenge content only. This may change from day to day
 if the challenge is:  
 *green* finished,  
 *gray* still working on,  
-has not been added yet I have not started.
+has not been added yet I have not started.  
 
+OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |No.|Name|Status|Additional Info|
 |--|--|--|--|
 |1|DrumKIT|:white_check_mark:|bugs on Safari|
@@ -15,6 +16,6 @@ has not been added yet I have not started.
 |5|Flex Panels Image Gallery|:white_check_mark:|-|
 |6|Type Ahead|:white_check_mark:|-|
 |7|Array Cardio Day 2|:white_check_mark:|-|
-|8|Fun with HTML5 Canvas|:ballot_box_with_check:|-|
+|8|Fun with HTML5 Canvas|:white_check_mark:|-|
+|9|Dev Tools|:ballot_box_with_check:|-|
 
-OG Repo [*here*](https://github.com/wesbos/JavaScript30).
