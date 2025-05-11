@@ -18,6 +18,6 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |7|Array Cardio Day 2|:white_check_mark:|-|
 |8|Fun with HTML5 Canvas|:white_check_mark:|-|
 |9|Dev Tools|:white_check_mark:|-|
-|9|Multiple Checkboxes|:ballot_box_with_check:|-|
+|10|Multiple Checkboxes|:white_check_mark:|add uncheck with shift|
 
 
