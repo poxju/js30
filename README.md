@@ -19,5 +19,6 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |8|Fun with HTML5 Canvas|:white_check_mark:|-|
 |9|Dev Tools|:white_check_mark:|-|
 |10|Multiple Checkboxes|:white_check_mark:|add uncheck with shift|
+|11|Custom Video Player|:white_check_mark:|add dynamic background|
 
 
