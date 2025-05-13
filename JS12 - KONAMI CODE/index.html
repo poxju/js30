@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <script type="text/javascript" src="./test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/omggif@1.0.10/omggif.js"></script>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <script>
+        window.addEventListener('keyup', (e) => {
+            console.log(e.key);
+            pressed.push(e.key);
+            pressed.splice(-secretCode.length -1,pressed.length - secretCode.length);
+            console.log(pressed);
+        if (pressed.join('').includes(secretCode)) {
+            showPlayer();
+        }})
+        const pressed = [];
+        const secretCode = 'poxju';
+    </script>
+  </body>
+</html>
