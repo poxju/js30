@@ -20,8 +20,8 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |9|Dev Tools|:white_check_mark:|-|
 |10|Multiple Checkboxes|:white_check_mark:|add uncheck with shift|
 |11|Custom Video Player|:white_check_mark:|add dynamic background|
-|11|Key Sequence Detect|:white_check_mark:|-|
-|12|Slide In on Scroll|:hourglass_flowing_sand:|-|
+|12|Key Sequence Detect|:white_check_mark:|-|
+|13|Slide In on Scroll|:white_check_mark:|-|
 
 
 
