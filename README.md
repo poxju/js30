@@ -22,6 +22,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |11|Custom Video Player|:white_check_mark:|add dynamic background|
 |12|Key Sequence Detect|:white_check_mark:|-|
 |13|Slide In on Scroll|:white_check_mark:|-|
+|14|Reference vs Copy|:white_check_mark:|-|
 
 
 
