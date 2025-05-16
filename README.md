@@ -23,6 +23,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |12|Key Sequence Detect|:white_check_mark:|-|
 |13|Slide In on Scroll|:white_check_mark:|-|
 |14|Reference vs Copy|:white_check_mark:|-|
+|15|Local Storage|:white_check_mark:|clear,uncheck&check list|
 
 
 
