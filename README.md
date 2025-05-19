@@ -25,6 +25,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |14|Reference vs Copy|:white_check_mark:|-|
 |15|Local Storage|:white_check_mark:|clear,uncheck&check list|
 |16|MouseShadow|:white_check_mark:|add fancy shadows|
+|17|Sort without Articles|:white_check_mark:|-|
 
 
 
