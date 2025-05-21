@@ -27,6 +27,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |16|MouseShadow|:white_check_mark:|add fancy shadows|
 |17|Sort without Articles|:white_check_mark:|-|
 |18|Adding Up Times with Reduce|:white_check_mark:|-|
+|19|Webcam Fun|:white_check_mark:|add color picker for greenScreen|
 
 
 
