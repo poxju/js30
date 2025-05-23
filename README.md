@@ -29,6 +29,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |18|Adding Up Times with Reduce|:white_check_mark:|-|
 |19|Webcam Fun|:white_check_mark:|add color picker for greenScreen|
 |20|Speech Detection|:white_check_mark:|fix speechrecognition for type error|
+|21|Geolocation|:white_check_mark:|add again with framework|
 
 
 
