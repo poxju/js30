@@ -31,6 +31,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |20|Speech Detection|:white_check_mark:|fix speechrecognition for type error|
 |21|Geolocation|:white_check_mark:|add again with framework|
 |22|Follow Along Link Highlighter|:white_check_mark:|-|
+|23|Speech Synthesis|:white_check_mark:|-|
 
 
 
