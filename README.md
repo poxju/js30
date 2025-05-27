@@ -32,7 +32,8 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |21|Geolocation|:white_check_mark:|add again with framework|
 |22|Follow Along Link Highlighter|:white_check_mark:|-|
 |23|Speech Synthesis|:white_check_mark:|-|
-
+|24|Sticky Nav|:white_check_mark:|-|
+|25|Event Capture, Propagation, Bubbling and Once|:white_check_mark:|-|
 
 
 
