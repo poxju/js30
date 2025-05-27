@@ -25,6 +25,10 @@ html {
     transition: transform 0.5s;
   }
   
+  body.fixed-nav .site-wrap{
+    transform: scale(1);
+  }
+  
   header {
     text-align: center;
     height: 50vh;
@@ -72,16 +76,15 @@ html {
   }
   
   li.logo {
-    width: 0;
+    max-width: 0;
     overflow: hidden;
     background: white;
-    transition: all 5s;
+    transition: all 0.5s;
     font-weight: 600;
     font-size: 30px;
   }
   .fixed-nav li.logo{
     max-width: 500px;
-    width: auto;
   }
   li.logo a {
     color: black;
