@@ -35,6 +35,8 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |24|Sticky Nav|:white_check_mark:|-|
 |25|Event Capture, Propagation, Bubbling and Once|:white_check_mark:|-|
 |26|Stripe Follow Along Dropdown|:white_check_mark:|might be use it|
+|27|Click and Drag to Scroll|:white_check_mark:|-|
+|28|Video Speed Controller|:white_check_mark:|add dynamically changing multiplier|
 
 
 
