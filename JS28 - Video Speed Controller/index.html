@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Speed Scrubber</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+  <div class="wrapper">
+    <video class="flex" width="765" height="430" src="https://stream.mux.com/dpW02GQwJN402ajBiOmIGETUL02THeQdybnW2DhxtwrJSw.m3u8?token=eyJhbGciOiJSUzI1NiJ9.eyJraWQiOiJoSXVXbUxiSE9mTUlrUUx1YTNMdHdsOGRSMVdUMkdPNDNaaFBGYnQ3QUFNIiwic3ViIjoiZHBXMDJHUXdKTjQwMmFqQmlPbUlHRVRVTDAyVEhlUWR5Ym5XMkRoeHR3ckpTdyIsImF1ZCI6InYiLCJleHAiOjE3NDkyMDA3MTh9.YMPrNPRPGEGBPCnZMYpDstggEAD7C0GyUUMaFuXsuQAGLrO3qpBcnfuf-O9tO--sg9jhTSTNETt1skYgGFcQaWagCAZ_vjip3qb4l_2oE6caKwKcovubeejfOk_CV0jNiP6uyc9xW_PpAJaYkgUt21JycI3W8l7AoFCwolOlGUZ3QN_328MhZWoCxdz-g7J7SvQQ0ac9TvizdAxxmT_W-pnTgJ0YRm8fM5htEXIk1i8il3DnsSqiP3LurhgPQIAgOuSr7tvPP67O7cIFhl04tx_QtfWyXlnaKp5ZlAsZ9_LoyIMChFYA6oqH7mRUcjE2JFnMpcjwQ_LQ_0tMSN5tDA" loop controls></video>
+    <div class="speed">
+      <div class="speed-bar">1×</div>
+    </div>
+  </div>
+
+<script>
+    const speed = document.querySelector('.speed');
+    const bar = speed.querySelector('.speed-bar');
+    const video = document.querySelector('.flex');
+
+    function handleMove(e){     
+    const y = e.pageY - this.offsetTop;
+    const percent = y / this.offsetHeight;  
+    const min = 0.4;
+    const max = 4;
+    const heigth = Math.round(percent * 100) + '%';
+    const playbackRate = percent * (max - min) + min;
+    bar.style.height = heigth;
+    bar.textContent = playbackRate.toFixed(2) + 'x';
+    video.playbackRate = playbackRate;
+    console.log(playbackRate)
+    console.log(heigth);
+    }
+
+    speed.addEventListener('mousemove', handleMove);
+</script>
+</body>
+</html>
