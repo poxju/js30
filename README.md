@@ -37,6 +37,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |26|Stripe Follow Along Dropdown|:white_check_mark:|might be use it|
 |27|Click and Drag to Scroll|:white_check_mark:|-|
 |28|Video Speed Controller|:white_check_mark:|add dynamically changing multiplier|
+|29|Countdown Clock|:white_check_mark:|add og clock, hourglass, animations etc.|
 
 
 
