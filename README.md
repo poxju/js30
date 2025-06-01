@@ -38,6 +38,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |27|Click and Drag to Scroll|:white_check_mark:|-|
 |28|Video Speed Controller|:white_check_mark:|add dynamically changing multiplier|
 |29|Countdown Clock|:white_check_mark:|add og clock, hourglass, animations etc.|
+|30|Whack A Mole|:white_check_mark:|add levels, fix multiclick|
 
 
 
