@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Var. & JS2</title>
+    <!-- TODO: I will be add photograpic options & file upload for image -->
+</head>
+<body>
+    <h2>Update CSS Variables with <span class="h1">JS</span></h2>
+    <div class="options">
+        <label for="spacing">Spacing</label>
+        <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+        <label for="blur">Blur</label>
+        <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+        <label for="base">Base Color</label>
+        <input type="color" name="base" value=#FFFc600>
+    </div>
+    <img id="sourceImage" src="/JS31 - CSS Var. & JS2/example.jpeg">
+    <div class="download-container">
+        <button id="downloadBtn">Download Image</button>
+    </div>
+<style>
+    :root{
+        --base: #b31111c1;
+        --spacing: 10px;
+        --blur: 0px;
+    }
+    body{
+        text-align: center;
+        background: #193549;
+        color:white;
+        font-family: 'helvetica neue', sans-serif;
+        font-weight: 100;
+        font-size: 30px;
+    }
+    .options{
+        margin-bottom: 30px;
+    }
+    .h1{
+        color: var(--base);
+    }
+    img{
+        padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
+        height: 60vh;
+    }
+    .download-container {
+        margin-top: 20px;
+    }
+    #downloadBtn {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: var(--base);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #downloadBtn:hover {
+        background-color: #FFFc60;
+        color: #193549;
+    }
+</style>
+<script>
+    const inputs = document.querySelectorAll('.options input');
+    
+    function handleUpdate() {
+        const suffix = this.dataset.sizing || '';
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+    }
+
+    inputs.forEach(input => input.addEventListener('change',handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove' ,handleUpdate));
+
+    // Download image functionality
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    downloadBtn.addEventListener('click', function() {
+        const img = document.getElementById('sourceImage');
+        
+        // Create canvas element
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Get computed styles
+        const styles = getComputedStyle(img);
+        const padding = parseInt(styles.paddingLeft);
+        const blur = parseFloat(styles.filter.match(/blur\(([^)]+)\)/)?.[1] || '0px');
+        const backgroundColor = styles.backgroundColor;
+        
+        // Set canvas dimensions to include padding
+        const width = img.naturalWidth;
+        const height = img.naturalHeight;
+        canvas.width = width + (padding * 2);
+        canvas.height = height + (padding * 2);
+        
+        // Apply background color
+        ctx.fillStyle = backgroundColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Apply blur effect if needed
+        if (blur > 0) {
+            ctx.filter = `blur(${blur})`;
+        }
+        
+        // Draw the image with padding
+        ctx.drawImage(img, padding, padding, width, height);
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = 'modified-image.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
+</script>
+</body>
+</html>
