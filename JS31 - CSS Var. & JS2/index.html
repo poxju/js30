@@ -9,22 +9,55 @@
 </head>
 <body>
     <h2>Update CSS Variables with <span class="h1">JS</span></h2>
-    <div class="options-container">
-
+    
+    <div class="toolbar">
+        <div class="tab" data-tab="filter">
+            <h3>Filter</h3>
+            <div class="tab-content">
+                <div class="options">
+                    <label for="blur">Blur</label>
+                    <input type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+                    
+                    <label for="hue">Hue Rotate</label>
+                    <input type="range" name="hue" min="0" max="360" value="0" data-sizing="deg">
+                    
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" name="grayscale" min="0" max="100" value="0" data-sizing="%">
+                    
+                    <label for="saturate">Saturate</label>
+                    <input type="range" name="saturate" min="0" max="10" value="1" data-sizing="">
+                    
+                    <label for="invert">Invert</label>
+                    <input type="range" name="invert" min="0" max="100" value="0" data-sizing="%">
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab" data-tab="edit">
+            <h3>Edit</h3>
+            <div class="tab-content">
+                <div class="options">
+                    <label for="spacing">Spacing</label>
+                    <input type="range" name="spacing" min="0" max="200" value="10" data-sizing="px">
+                    
+                    <label for="base">Base Color</label>
+                    <input type="color" name="base" value="#727374">
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab" data-tab="upload-download">
+            <h3>Upload/Download</h3>
+            <div class="tab-content">
+                <div class="upload-download-options">
+                    <button id="uploadBtn">Upload Image</button>
+                    <button id="downloadBtn">Download Image</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="options">
-        <label for="spacing">Spacing</label>
-        <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
-        <label for="blur">Blur</label>
-        <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
-        <label for="base">Base Color</label>
-        <input type="color" name="base" value=#FFFc600>
-    </div>
-    <div class="download-container">
-        <button id="uploadBtn">Upload Image</button>
-        <button id="downloadBtn">Download Image</button>
-    </div>
-    <img id="sourceImage" src="/JS31 - CSS Var. & JS2/example.jpeg">
+    
+    <img id="sourceImage" src="example.jpeg">
     <script src="scripts.js"></script>
 </body>
 </html>

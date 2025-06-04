@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll(".options input");
+const tabs = document.querySelectorAll(".tab");
 
 function handleUpdate() {
   const suffix = this.dataset.sizing || "";
@@ -11,61 +12,65 @@ function handleUpdate() {
 inputs.forEach((input) => input.addEventListener("change", handleUpdate));
 inputs.forEach((input) => input.addEventListener("mousemove", handleUpdate));
 
-const downloadBtn = document.getElementById("downloadBtn");
-const uploadBtn = document.getElementById("uploadBtn");
+// Tab functionality
+function toggleTab() {
+  // Close all tabs
+  tabs.forEach((tab) => tab.classList.remove("active"));
 
-uploadBtn.addEventListener("click", function () {
-  const fileInput = document.createElement("input");
-  fileInput.type = "file";
-  fileInput.accept = "image/*";
-  fileInput.style.display = "none";
+  // Open the clicked tab
+  this.classList.toggle("active");
+}
 
-  document.body.appendChild(fileInput);
-
-  fileInput.click();
-
-  fileInput.addEventListener("change", () => {
-    if (fileInput.files && fileInput.files[0]) {
-      const selectedFile = fileInput.files[0];
-      const objectURL = URL.createObjectURL(selectedFile);
-      const img = document.getElementById("sourceImage");
-      img.src = objectURL;
-
-      img.onload = function () {
-        URL.revokeObjectURL(objectURL);
-      };
+tabs.forEach((tab) =>
+  tab.querySelector("h3").addEventListener("click", function () {
+    const parentTab = this.parentElement;
+    if (parentTab.classList.contains("active")) {
+      parentTab.classList.remove("active");
+    } else {
+      tabs.forEach((t) => t.classList.remove("active"));
+      parentTab.classList.add("active");
     }
-    document.body.removeChild(fileInput);
-  });
+  })
+);
+
+// Upload functionality
+document.getElementById("uploadBtn").addEventListener("click", function () {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "image/*";
+  input.onchange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        document.getElementById("sourceImage").src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+  input.click();
 });
 
-downloadBtn.addEventListener("click", function () {
-  const img = document.getElementById("sourceImage");
-
+// Download functionality
+document.getElementById("downloadBtn").addEventListener("click", function () {
   const canvas = document.createElement("canvas");
+  const img = document.getElementById("sourceImage");
+  canvas.width = img.naturalWidth;
+  canvas.height = img.naturalHeight;
+
   const ctx = canvas.getContext("2d");
+  // Apply CSS filters to canvas
+  const computedStyle = getComputedStyle(img);
+  ctx.filter = computedStyle.filter;
 
-  const styles = getComputedStyle(img);
-  const padding = parseInt(styles.paddingLeft);
-  const blur = parseFloat(styles.filter.match(/blur\(([^)]+)\)/)?.[1] || "0px");
-  const backgroundColor = styles.backgroundColor;
+  ctx.drawImage(img, 0, 0);
 
-  const width = img.naturalWidth;
-  const height = img.naturalHeight;
-  canvas.width = width + padding * 2;
-  canvas.height = height + padding * 2;
-
-  ctx.fillStyle = backgroundColor;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  if (blur > 0) {
-    ctx.filter = `blur(${blur})`;
-  }
-
-  ctx.drawImage(img, padding, padding, width, height);
-
+  // Convert to dataURL and download
   const link = document.createElement("a");
-  link.download = "modified-image.png";
+  link.download = "filtered-image.png";
   link.href = canvas.toDataURL("image/png");
   link.click();
 });
+
+// Initialize - open the first tab by default
+tabs[0].classList.add("active");
