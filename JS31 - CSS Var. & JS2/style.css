@@ -1,5 +1,5 @@
 :root {
-  --base: #727374;
+  --base: white;
   --blur: 0px;
   --spacing: 10px;
   --hue: 0deg;
@@ -101,7 +101,7 @@ button:hover {
 
 img {
   padding: var(--spacing);
-  background: #fff;
+  background: var(--base);
   filter: blur(var(--blur)) hue-rotate(var(--hue)) grayscale(var(--grayscale)) 
           saturate(var(--saturate)) invert(var(--invert));
   max-width: 80%;
