@@ -41,6 +41,7 @@ OG Repo [*here*](https://github.com/wesbos/JavaScript30).
 |30|Whack A Mole|:white_check_mark:|add levels, fix multiclick|
 |31|CSS Var. & JS Extended|:hourglass_flowing_sand:|-|
 |32|Custom Video P. Background|:hourglass_flowing_sand:|feat:ambilight|
+|33|Maps|:hourglass_flowing_sand:|add API|
 
 
 
